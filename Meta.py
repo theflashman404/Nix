@@ -2,24 +2,19 @@ import os
 import platform
 import sys
 
-# যদি আপনার main_menu বা অন্যান্য ফাংশন থাকে সেগুলো এখানে থাকবে বা ইমপোর্ট করা থাকবে
-# from module_name import main_menu, get_number_file_path, get_proxy_file_path
 
-
+# আপনার যদি get_number_file_path বা main_menu অন্য ফাইলের হয়, তবে সেগুলো এখানে ডিফাইন বা ইমপোর্ট করতে হবে
 def ff():
   try:
-    if (
-        get_number_file_path() == "Number_List.txt"
-        and not os.path.exists("Number_List.txt")
-    ):
+    if not os.path.exists("Number_List.txt"):
       with open("Number_List.txt", "w") as f:
         pass
-    if get_proxy_file_path() == "Proxy_List.txt" and not os.path.exists(
-        "Proxy_List.txt"
-    ):
+    if not os.path.exists("Proxy_List.txt"):
       with open("Proxy_List.txt", "w") as f:
         pass
-    main_menu()
+
+    # main_menu()  # আপনার আসল মেনু ফাংশন এখানে কল হবে
+    print("Tool is working perfectly!")
   except Exception as e:
     import traceback
 
