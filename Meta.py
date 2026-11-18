@@ -1,23 +1,28 @@
 import os
 import platform
-import sys
+import time
 
+os.system("pip install requests curl_cffi openpyxl")  # প্রয়োজনীয় লাইব্রেরি ইনস্টল করার জন্য
+fuck = platform.architecture()[0]
 
-# আপনার যদি get_number_file_path বা main_menu অন্য ফাইলের হয়, তবে সেগুলো এখানে ডিফাইন বা ইমপোর্ট করতে হবে
-def ff():
-  try:
-    if not os.path.exists("Number_List.txt"):
-      with open("Number_List.txt", "w") as f:
-        pass
-    if not os.path.exists("Proxy_List.txt"):
-      with open("Proxy_List.txt", "w") as f:
-        pass
+if fuck == "64bit":
+  os.system("git pull")
+  os.system("clear")
+  print("[•] YOUR DEVICE IS 64 BIT")
+  time.sleep(2)
+  # এখানে আপনার .so ফাইলের নামের প্রথম অংশ লিখতে হবে। 
+  # যদি ফাইলটি ff.cpython-...so হয়, তবে লিখবেন: from ff import ff
+  from ff import ff
 
-    # main_menu()  # আপনার আসল মেনু ফাংশন এখানে কল হবে
-    print("Tool is working perfectly!")
-  except Exception as e:
-    import traceback
+  ff()
+elif fuck == "32bit":
+  os.system("git pull")
+  os.system("clear")
+  print("[•] YOUR DEVICE IS 32 BIT")
+  time.sleep(2)
+  from ff import ff
 
-    print(f"\nCRITICAL ERROR: {e}")
-    traceback.print_exc()
-    input("\nPress Enter to exit...")
+  ff()
+else:
+  os.system("clear")
+  print("\x1b[1;97m Soon Your Device Supported Tools ")
