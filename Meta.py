@@ -7,7 +7,7 @@ else:
         import ff
 
         
-        if hasattr(metav10, "main_menu"):
+        if hasattr(ff, "main_menu"):
             ff.main_menu()
         elif hasattr(metav10, "main"):
             ff.main()
